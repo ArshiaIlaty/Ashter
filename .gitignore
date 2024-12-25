@@ -4,6 +4,9 @@ env/
 venv/
 ENV/
 
+data/
+dataset/
+
 # Python
 __pycache__/
 *.py[cod]
