@@ -39,8 +39,6 @@ build/
 *.swp
 *.swo
 
-#datasets
-dataset
 dataset_yolo
 src/runs
 src/yolo11n.pt
