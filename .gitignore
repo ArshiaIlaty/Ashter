@@ -44,4 +44,7 @@ dataset
 dataset_yolo
 src/runs
 src/yolo11n.pt
+src/yolov8m.pt*.pt
+*.h5
+*.pt
 src/yolov8m.pt
