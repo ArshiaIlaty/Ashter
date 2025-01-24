@@ -48,3 +48,8 @@ src/yolov8m.pt*.pt
 *.h5
 *.pt
 src/yolov8m.pt
+*.pt
+*.pth
+*.onnx
+*.engine
+src/yolo*.pt
