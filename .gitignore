@@ -39,6 +39,9 @@ build/
 *.swp
 *.swo
 
-# OS specific files
-.DS_Store
-Thumbs.db
+#datasets
+dataset
+dataset_yolo
+src/runs
+src/yolo11n.pt
+src/yolov8m.pt

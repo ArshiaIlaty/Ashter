@@ -96,3 +96,9 @@ websocket-client==1.8.0
 wheel==0.45.0
 wsproto==1.2.0
 yarl==1.17.2
+pyyaml
+ultralytics
+scikit-learn
+opencv-python
+torch
+numpy
