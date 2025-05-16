@@ -1,7 +1,9 @@
+# Python virtual environment
 myenv/
-__pycache__/
-*.pyc
-.DS_Store
+venv/
+env/
+
+# Dataset and data directories
 data/
 dataset/
 dog_waste_images/
@@ -20,3 +22,23 @@ dog_waste_images/
 !requirements.txt
 !LICENSE
 !README.md
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS specific files
+.DS_Store
+Thumbs.db
