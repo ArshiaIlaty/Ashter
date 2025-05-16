@@ -7,16 +7,12 @@ env/
 data/
 dataset/
 dog_waste_images/
-dataset_yolo/
-
-# Model files and logs
 *.pt
 *.pth
 *.weights
 *.onnx
 *.engine
 *.trt
-*.h5
 *.log
 *.csv
 *.json
@@ -47,9 +43,13 @@ build/
 .DS_Store
 Thumbs.db
 
-# ML specific
-wandb/
-runs/
-src/wandb/
-src/runs/
-src/yolo*.pt
+# macOS specific files
+.DS_Store
+
+# Windows specific files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+Thumbs.db
+ehthumbs.db
+Desktop.ini
