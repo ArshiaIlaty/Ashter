@@ -65,29 +65,16 @@ def process_directory(input_dir, output_dir):
 
 def main():
     # Base paths
-    base_dir = '/home/ailaty3088@id.sdsu.edu/Ashter/dataset'
+    base_dir = '/home/ailaty3088@id.sdsu.edu/Ashter/dataset/'
     
     # Process each split (train/val/test)
     for split in ['train', 'val', 'test']:
         input_dir = os.path.join(base_dir, split, 'labels')
-        output_dir = os.path.join(base_dir, f'{split}_yolo', 'labels')
         
         if os.path.exists(input_dir):
             print(f"\nProcessing {split} set...")
-            files_processed = process_directory(input_dir, output_dir)
+            files_processed = process_directory(input_dir, input_dir)  # Convert in place
             print(f"Completed {split} set: {files_processed} files processed")
-            
-            # Create corresponding images directory and copy/link images
-            src_img_dir = os.path.join(base_dir, split, 'images')
-            dst_img_dir = os.path.join(base_dir, f'{split}_yolo', 'images')
-            if os.path.exists(src_img_dir):
-                os.makedirs(dst_img_dir, exist_ok=True)
-                # Create symbolic links to images
-                for img in os.listdir(src_img_dir):
-                    src = os.path.join(src_img_dir, img)
-                    dst = os.path.join(dst_img_dir, img)
-                    if not os.path.exists(dst):
-                        os.symlink(src, dst)
         else:
             print(f"Directory not found: {input_dir}")
 
