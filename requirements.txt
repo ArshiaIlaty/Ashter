@@ -102,3 +102,6 @@ scikit-learn
 opencv-python
 torch
 numpy
+wandb
+tensorflow
+tensorflowjs

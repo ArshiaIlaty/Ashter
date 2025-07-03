@@ -205,8 +205,8 @@ def analyze_evaluation_results(summary_path):
 
 def main():
     """Main analysis function."""
-    # Paths
-    training_csv = "runs/train/pet_waste_detector_20250522_151303/results.csv"
+    # Paths - Updated to use the correct fine-tuned model path
+    training_csv = "runs/detect/shitspotter_finetune/results.csv"
     evaluation_summary = "shitspotter_evaluation_results/metrics/summary_20250627_190104.txt"
     
     print("🔍 Loading training results...")
@@ -214,7 +214,7 @@ def main():
     
     # Generate plots
     print("📊 Generating training analysis plots...")
-    plot_training_curves(df, "training_analysis.png")
+    plot_training_curves(df, "fine_tuned_training_analysis.png")
     
     # Analyze training performance
     analyze_training_performance(df)
@@ -222,8 +222,8 @@ def main():
     # Analyze evaluation results
     analyze_evaluation_results(evaluation_summary)
     
-    print(f"\n📁 Analysis complete! Check 'training_analysis.png' for visualizations.")
-    print(f"📁 Best model saved at: runs/train/pet_waste_detector_20250522_151303/weights/best.pt")
+    print(f"\n📁 Analysis complete! Check 'fine_tuned_training_analysis.png' for visualizations.")
+    print(f"📁 Best model saved at: /home/ailaty3088@id.sdsu.edu/Ashter/runs/detect/shitspotter_finetune/weights/best.pt")
 
 if __name__ == "__main__":
     main() 
